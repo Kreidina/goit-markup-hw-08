@@ -1,0 +1,41 @@
+.join {
+  @media screen and (max-width: 767px) {
+    margin: 60px 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $primary-white-color;
+    margin-bottom: 20px;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+  }
+  &__list {
+    display: flex;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+.join__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary-white-color;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color $duration-function;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}

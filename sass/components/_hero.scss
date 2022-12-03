@@ -1,0 +1,84 @@
+.hero {
+  background-color: $bgr-blue;
+  padding: 118px 0;
+  max-width: 480px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero/bgr_s@1x.jpg');
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/hero/bgr_s@2x.jpg');
+  }
+  @media screen and (min-width: 481px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/hero/bgr_m@1x.jpg');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/hero/bgr_m@2x.jpg');
+    }
+  }
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/hero/bgr_l@1x.jpg');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/hero/bgr_l@2x.jpg');
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 200px 0;
+    max-width: 1600px;
+  }
+
+  &__title {
+    color: $primary-white-color;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    width: 360px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+
+      line-height: 1.36;
+      width: 696px;
+    }
+  }
+}
+
+.hero__button {
+  color: $primary-white-color;
+  background-color: $accent-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  margin: 0 auto;
+  padding: 10px 24px;
+
+  transition: color $duration-function, background-color $duration-function;
+
+  @media screen and (min-width: $desktop) {
+    padding: 10px 32px;
+  }
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background-color: #188ce8;
+  }
+}

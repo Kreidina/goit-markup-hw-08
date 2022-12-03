@@ -1,0 +1,83 @@
+.team {
+  background-color: $bgr-button;
+}
+.team__item {
+  box-shadow: $card-shadow;
+  background-color: $primary-white-color;
+  border-radius: 0px 0px 4px 4px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .team__item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .team__list {
+    display: flex;
+  }
+  .team__item {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+.card {
+  padding: 30px 0;
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+  }
+  &__text {
+    color: $title-text-color;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    margin-top: 10px;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  &__item {
+    margin-right: 10px;
+  }
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.card__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: $primary-white-color;
+  border-radius: 50%;
+  color: $primary-gray-color;
+
+  transition: color $duration-function, background-color $duration-function;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-white-color;
+  }
+}

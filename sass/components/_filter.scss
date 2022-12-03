@@ -1,0 +1,48 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  &__item {
+    margin-right: 8px;
+    @media screen and (min-width: $tablet) {
+      //   margin-bottom: -15px;
+    }
+  }
+  &__button {
+    border: none;
+    padding: 6px 22px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .filter__item:nth-child(3) {
+    margin-right: 20px;
+  }
+  .filter__item {
+    margin-bottom: 15px;
+  }
+}
+.button {
+  color: $primary-text-color;
+  background-color: $bgr-button;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  font-family: inherit;
+
+  transition: color $duration-function, background-color $duration-function,
+    box-shadow $duration-function;
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: $card-shadow;
+  }
+}

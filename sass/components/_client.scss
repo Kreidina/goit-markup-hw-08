@@ -1,0 +1,38 @@
+.client {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    @media screen and (min-width: $desktop) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__icons {
+    fill: currentColor;
+  }
+}
+.client__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 92px;
+  color: $primary-gray-color;
+  border: 1px solid $primary-gray-color;
+  border-radius: 4px;
+
+  transition: color $duration-function, border $duration-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border: 1px solid $accent-color;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 226px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 170px;
+  }
+}
