@@ -1,16 +1,15 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   &__item {
     margin-right: 8px;
     @media screen and (min-width: $tablet) {
-      //   margin-bottom: -15px;
     }
   }
   &__button {
     border: none;
-    padding: 6px 22px;
+    padding: 6px 24px;
   }
   @media screen and (min-width: $tablet) {
     margin-bottom: 30px;
@@ -21,9 +20,6 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .filter__item:nth-child(3) {
-    margin-right: 20px;
-  }
   .filter__item {
     margin-bottom: 15px;
   }

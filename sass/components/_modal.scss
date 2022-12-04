@@ -8,7 +8,6 @@
   visibility: visible;
   opacity: 1;
   transition: opacity $duration-function, visibility $duration-function;
-  overflow-y: scroll;
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -22,7 +21,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -31,6 +29,13 @@
 
   transform: scaleY(1) translate(-50%, -50%);
   transition: transform $duration-function;
+  @media screen and (max-width: 1199px) {
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow-y: scroll;
+  }
   @media screen and (min-width: $desktop) {
     width: 528px;
     height: 581px;

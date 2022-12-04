@@ -269,7 +269,7 @@ button {
 .hero {
   background-color: #2f303a;
   padding: 118px 0;
-  max-width: 480px;
+  max-width: 1600px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -307,15 +307,9 @@ button {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bgr_l@2x.jpg");
   }
 }
-@media screen and (min-width: 768px) {
-  .hero {
-    max-width: 768px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .hero {
     padding: 200px 0;
-    max-width: 1600px;
   }
 }
 .hero__title {
@@ -326,7 +320,7 @@ button {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 360px;
+  max-width: 360px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -334,7 +328,7 @@ button {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
-    width: 696px;
+    max-width: 696px;
   }
 }
 
@@ -362,9 +356,6 @@ button {
 
 .feature {
   background-color: #ffffff;
-}
-.feature__list {
-  padding-left: 0;
 }
 @media screen and (min-width: 768px) {
   .feature__list {
@@ -416,6 +407,11 @@ button {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .feature__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature__item {
     -ms-flex-preferred-size: calc((100% - 60px) / 2);
@@ -675,19 +671,14 @@ button {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts {
     margin-right: 70px;
-  }
-  .tablet-style {
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
   }
 }
 .address {
@@ -744,6 +735,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .join__icon {
   fill: currentColor;
@@ -762,7 +756,6 @@ button {
   color: #ffffff;
   width: 44px;
   height: 44px;
-  margin-right: 10px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -770,6 +763,10 @@ button {
 }
 .join__link:hover, .join__link:focus {
   background-color: #2196f3;
+}
+
+.join__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 767px) {
@@ -937,7 +934,6 @@ button {
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -954,7 +950,6 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -966,6 +961,15 @@ button {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow-y: scroll;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -1286,7 +1290,10 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 32px;
+  row-gap: 10px;
 }
 .mobile-social__link {
   font-weight: 500;

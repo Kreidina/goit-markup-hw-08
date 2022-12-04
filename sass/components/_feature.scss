@@ -1,7 +1,6 @@
 .feature {
   background-color: $primary-white-color;
   &__list {
-    padding-left: 0;
     @media screen and (min-width: $tablet) {
       display: flex;
       flex-wrap: wrap;
@@ -34,6 +33,11 @@
     align-items: center;
     background-color: $bgr-button;
     border-radius: 4px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .feature__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }

@@ -18,15 +18,12 @@
   .tablet-style {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: baseline;
   }
 }
 @media screen and (min-width: $desktop) {
   .contacts {
     margin-right: 70px;
-  }
-  .tablet-style {
-    align-items: baseline;
   }
 }
 

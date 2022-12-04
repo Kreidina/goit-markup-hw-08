@@ -85,7 +85,9 @@
 
 .mobile-social {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 32px;
+  row-gap: 10px;
   &__link {
     font-weight: 500;
     font-size: 18px;

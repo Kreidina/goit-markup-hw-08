@@ -16,6 +16,7 @@
   }
   &__list {
     display: flex;
+    justify-content: center; //
   }
 
   &__icon {
@@ -29,7 +30,6 @@
   color: $primary-white-color;
   width: 44px;
   height: 44px;
-  margin-right: 10px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 
@@ -38,4 +38,7 @@
   &:focus {
     background-color: $accent-color;
   }
+}
+.join__item:not(:last-child) {
+  margin-right: 10px;
 }
