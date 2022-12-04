@@ -360,6 +360,9 @@ button {
         flex-basis: calc((100% - 60px) / 2);
     margin: 15px;
   }
+  .work .first-card {
+    padding-bottom: 56px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .work__list {
