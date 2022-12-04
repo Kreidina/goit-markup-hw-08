@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+
     @media screen and (min-width: $desktop) {
       flex-wrap: nowrap;
     }
@@ -12,12 +12,20 @@
   &__icons {
     fill: currentColor;
   }
+  &__item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+    }
+  }
 }
+
 .client__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 210px;
   height: 92px;
   color: $primary-gray-color;
   border: 1px solid $primary-gray-color;
@@ -28,9 +36,6 @@
   &:focus {
     color: $accent-color;
     border: 1px solid $accent-color;
-  }
-  @media screen and (min-width: $tablet) {
-    width: 226px;
   }
   @media screen and (min-width: $desktop) {
     width: 170px;
