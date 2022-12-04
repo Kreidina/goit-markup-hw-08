@@ -22,13 +22,15 @@
   background-color: $primary-white-color;
   z-index: 999;
   overflow-y: scroll;
+  opacity: 0;
 
   transform: translateX(100%);
-  transition: transform $duration-function;
+  transition: transform $duration-function, opacity $duration-function;
 }
 
 .menu-container.is-open {
   transform: translateX(0);
+  opacity: 1;
 }
 
 .close-toggle {

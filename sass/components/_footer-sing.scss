@@ -1,4 +1,8 @@
 .sign-form {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-top: 60px;
   }
@@ -30,7 +34,7 @@
 .sing-form__input {
   color: $primary-white-color;
   background-color: #2f303a;
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -41,6 +45,9 @@
   &:hover,
   &:focus {
     box-shadow: $button-shadow;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 450px;
   }
   @media screen and (max-width: 1199px) {
     margin: 20px auto;
