@@ -21,7 +21,7 @@
   padding: 48px 40px;
   background-color: $primary-white-color;
   z-index: 999;
-  overflow-y: scroll;
+
   opacity: 0;
   transform: translateX(100%);
   transition: transform $duration-function, opacity $duration-function;
@@ -50,6 +50,7 @@
   padding: 0;
   margin-bottom: auto;
   overflow: hidden;
+  overflow: scroll;
 }
 
 .menu__link {

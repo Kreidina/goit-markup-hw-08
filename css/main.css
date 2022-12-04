@@ -1222,7 +1222,6 @@ textarea {
   padding: 48px 40px;
   background-color: #ffffff;
   z-index: 999;
-  overflow-y: scroll;
   opacity: 0;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -1254,6 +1253,7 @@ textarea {
   padding: 0;
   margin-bottom: auto;
   overflow: hidden;
+  overflow: scroll;
 }
 
 .menu__link {
